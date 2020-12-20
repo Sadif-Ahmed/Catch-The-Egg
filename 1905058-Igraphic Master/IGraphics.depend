@@ -1,0 +1,121 @@
+# depslib dependency file v1.0
+1606919446 source:f:\igraphics-master\imain.cpp
+	"iGraphics.h"
+	<math.h>
+	<conio.h>
+
+1563940332 f:\igraphics-master\igraphics.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"glut.h"
+	<time.h>
+	<math.h>
+	"glaux.h"
+
+1563940332 f:\igraphics-master\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1563940332 f:\igraphics-master\opengl\include\glaux.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1607258426 source:f:\igraphics-master\picturedemo.cpp
+	"iGraphics.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+
+1563940332 source:f:\igraphics-master\solarsystem.cpp
+	"iGraphics.h"
+	"gl.h"
+
+1563940332 f:\igraphics-master\opengl\include\gl.h
+
+1563940332 source:f:\igraphics-master\mousedemo.cpp
+	"iGraphics.h"
+
+1563940332 source:f:\igraphics-master\balldemo.cpp
+	"iGraphics.h"
+	"gl.h"
+
+1603901338 source:f:\igraphics-master\curve1905058.cpp
+	"iGraphics.h"
+	<math.h>
+	<conio.h>
+
+1608383347 source:f:\igraphics-master\catchtheegg.cpp
+	"iGraphics.h"
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+	<Windows.h>
+	<MMSystem.h>
+
+1608403432 source:g:\1905058-igraphic master\catchtheegg.cpp
+	"iGraphics.h"
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+	<Windows.h>
+	<MMSystem.h>
+
+1563940332 g:\1905058-igraphic master\igraphics.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"glut.h"
+	<time.h>
+	<math.h>
+	"glaux.h"
+
+1563940332 g:\1905058-igraphic master\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1563940332 g:\1905058-igraphic master\opengl\include\glaux.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1608403434 source:f:\1905058-igraphic master\catchtheegg.cpp
+	"iGraphics.h"
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	<conio.h>
+	<Windows.h>
+	<MMSystem.h>
+
+1563940332 f:\1905058-igraphic master\igraphics.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"glut.h"
+	<time.h>
+	<math.h>
+	"glaux.h"
+
+1563940332 f:\1905058-igraphic master\opengl\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1563940332 f:\1905058-igraphic master\opengl\include\glaux.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
