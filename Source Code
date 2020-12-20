@@ -29,6 +29,7 @@ int tmode=0,diffmode=1;
 int textmode=0;
 int airflag=0,af;
 int btime=0,btflag=0;
+int doomflag=0,doomtime=0;
 int soundflag=1;
 int ar1[10]= {0},ar2[10]= {0},ar3[10]= {0},p=0,q=0,r=0;
 char scarr1[10][20]= {"NUll","NUll","NUll","NUll","NUll","NUll","NUll","NUll","NUll","NUll"};
@@ -91,6 +92,7 @@ void pauses(void)
     fprintf(fp,"%d\n",doom.y);
     fprintf(fp,"%d\n",tmode);
     fprintf(fp,"%d\n",btime);
+    fprintf(fp,"%d\n",doomtime);
     fprintf(fp,"%d\n",bbuff);
     fprintf(fp,"%d\n",diffmode);
     fprintf(fp,"%d\n",af);
@@ -131,6 +133,7 @@ void pauser(void)
     fscanf(fp,"%d",&doom.y);
     fscanf(fp,"%d",&tmode);
     fscanf(fp,"%d",&btime);
+    fscanf(fp,"%d",&doomtime);
     fscanf(fp,"%d",&bbuff);
     fscanf(fp,"%d",&diffmode);
     fscanf(fp,"%d",&af);
@@ -393,6 +396,15 @@ void timecounter()
         {
             btflag=0;
         }
+        if(doomtime>0)
+        {
+            doomtime--;
+            doomflag=1;
+        }
+        else
+        {
+            doomflag=0;
+        }
     }
 
 }
@@ -447,8 +459,7 @@ void scorecounter()
             vanisher(&bt.x);
         }
         else if((doom.x>bas.x-bsr)&&(doom.x<bas.x+bsr)&&(doom.y>bas.y)&&(doom.y<bas.y+bsr))
-        {
-            times-=15;
+        {   doomtime+=10;
             vanisher(&doom.x);
         }
         else if((basb.x>bas.x-bsr)&&(basb.x<bas.x+bsr)&&(basb.y>bas.y)&&(basb.y<bas.y+bsr))
@@ -522,7 +533,10 @@ void eggm()
     {
         eggs=60;
     }
-
+    if(doomflag==1)
+    {
+        eggs=80;
+    }
 
     egg.y-=eggs;
     egg2.y-=eggs;
@@ -547,7 +561,7 @@ void eggm()
         timebs.x-=10;
         bt.x-=10;
         doom.x-=10;
-        basb.x-+10;
+        basb.x-=10;
 
     }
     else if(af==2)
@@ -614,7 +628,7 @@ void iDraw()
         iText(450,350,"Catching Shit takes away 10 points.",GLUT_BITMAP_TIMES_ROMAN_24);
         iText(450,300,"Catching Stopwatch grants 15 seconds.",GLUT_BITMAP_TIMES_ROMAN_24);
         iText(450,250,"Catching Star Slows down falling eggs for 10 seconds.",GLUT_BITMAP_TIMES_ROMAN_24);
-        iText(450,100,"Catching Skull takes away 15 seconds.",GLUT_BITMAP_TIMES_ROMAN_24);
+        iText(450,100,"Catching Skull Increases egg speed for 10 seconds.",GLUT_BITMAP_TIMES_ROMAN_24);
         iText(450,50,"Catching Donut Extends basket for 5 seconds.",GLUT_BITMAP_TIMES_ROMAN_24);
 
     }
@@ -657,7 +671,7 @@ void iDraw()
         }
         if(basfl==0)
         {
-        iShowBMP2(bas.x,bas.y,"b1.bmp",0xFFFFFF);
+            iShowBMP2(bas.x,bas.y,"b1.bmp",0xFFFFFF);
         }
         if(basfl==1)
         {
@@ -1111,7 +1125,7 @@ void iSpecialKeyboard(unsigned char key)
             doom.y=1500;
             bt.x=1500;
             bt.y=1500;
-             basb.x=1300;
+            basb.x=1300;
             basb.y=1300;
             timebs.x=2056;
             timebs.y=1020;
@@ -1153,7 +1167,7 @@ int main()
     doom.x=1500;
     doom.y=1500;
     basb.x=1500;
-            basb.y=1300;
+    basb.y=1300;
     timebs.x=2056;
     timebs.y=1020;
     len = 0;
